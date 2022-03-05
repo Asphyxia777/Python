@@ -3,7 +3,10 @@ import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
-
+st.write("""
+# Простое приложение Для Определения Цветов Ириса
+# Это приложение определяет тип ** ЦВЕТКА ИРИСА **!
+"""
 
 st.sidebar.header('User Input Parameters')
 
@@ -18,4 +21,26 @@ def user_input_features():
             'petal_width': petal_width}
     features = pd.DataFrame(data, index=[0])
     return features
+         
+         
+         
+st.subheader('User Input parameters')
+st.write(df)
+         
+         
+         
+         
+         
+         
+         
+         
+st.subheader('Class labels and their corresponding index number')
+st.write(iris.target_names)
 
+st.subheader('Prediction')
+st.write(iris.target_names[prediction])
+
+st.subheader('Prediction Probability')
+st.write(prediction_proba)
+         
+         
